@@ -1,23 +1,24 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script
-      src="https://unpkg.com/htmx.org@1.9.8"
-      integrity="sha384-rgjA7mptc2ETQqXoYC3/zJvkU7K/aP44Y+z7xQuJiVnB/422P/Ak+F/AqFR7E4Wr"
-      crossorigin="anonymous"
-    ></script>
+    <title>GoalsApp</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <h1>GoalsApp</h1>
 
-    <form hx-post="/add-goal/" hx-target="#goal-list" hx-swap="beforeend">
-      <input type="text" name="addgoal" />
-      <input type="submit" value="Add" />
+    <h2>Add Goal</h2>
+    <form id="addForm">
+      <label for="title">Title:</label>
+      <input type="text" id="title" required />
+      <button type="submit">Add Goal</button>
     </form>
-    <h2>Goals List:</h2>
-    <ul id="goal-list"></ul>
+
+    <h2>Goals List</h2>
+    <ul id="goalsList"></ul>
+
+    <script src="scripts.js"></script>
   </body>
 </html>
